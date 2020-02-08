@@ -60,4 +60,10 @@ def self.new_from_db(array)
   grade = array[2]
   student = Student.new(id, name, grade)
 end
+
+def self.find_by_name(name)
+  sql = <<-SQL
+  SELECT name FROM students
+  SQL
+  end
 end
