@@ -40,8 +40,8 @@ def save
 end
 
 def update
-  sql = "UPDATE students SET name = ?, album = ? WHERE name = ?"
-  DB[:conn].execute(sql, self.name, self.album, self.name)
+  sql = "UPDATE students SET name = ?, album = ? WHERE id = ?"
+  DB[:conn].execute(sql, self.name, self.album, self.id)
 end
 
 end
